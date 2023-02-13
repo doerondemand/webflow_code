@@ -100,6 +100,10 @@ $('.accept_butt').click(function(){
  let elemcount = $(this).attr('elemindex')
  updateapi( Number(elemcount) + 2 )
 $(this).parent().parent().parent().remove()
+	let cust_ph = $(this).parent().parent().parent().find('#ticket_phone').text();
+	console.log(cust_ph)
+	let ord_stat = cookuser.user_type == 'warehouse' ?  "Accepted By Warehouse" :  "Accepted By Driver";
+sendupdatesms(ord_stat,cust_ph)	
 })
 
 $(initobj.elementdivclass)[0].remove();
