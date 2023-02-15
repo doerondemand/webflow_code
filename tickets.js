@@ -98,6 +98,7 @@ let singdat = homedat[x];
 
 $('.accept_butt').click(function(){
  let elemcount = $(this).attr('elemindex')
+ console.log( Number(elemcount) + 2 )
  console.log( sheetdata[Number(elemcount) + 2] )
  //updateapi( Number(elemcount) + 2 )
 //$(this).parent().parent().parent().remove()
@@ -224,7 +225,7 @@ function updateapi(rowid)
        });   
 }
 
-
+/*
 function setCookie(name,value,days) {
     var expires = "";
     if (days) {
@@ -248,3 +249,4 @@ function getCookie(name) {
 function eraseCookie(name) {   
     document.cookie = name+'=; Max-Age=-99999999;';  
 }
+*/
