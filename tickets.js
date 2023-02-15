@@ -98,7 +98,7 @@ let singdat = homedat[x];
 
 $('.accept_butt').click(function(){
  let elemcount = $(this).attr('elemindex')
- console.log( sheetdata[elemcount+2] )
+ console.log( sheetdata )
  //updateapi( Number(elemcount) + 2 )
 //$(this).parent().parent().parent().remove()
 //	let cust_ph = $(this).parent().parent().parent().find('#ticket_phone').text();
