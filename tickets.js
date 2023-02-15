@@ -214,11 +214,10 @@ function updateapi(rowid,old_status)
 {
 	console.log(old_status)
 
-	/*
 	$.ajax({
       url: "https://hooks.zapier.com/hooks/catch/10809363/bvri3xm/",
       data:JSON.stringify( {
-"status" : cookuser.user_type == 'warehouse' ?  "warehouseaccepted" : 'accepted_' + cookuser.phone,
+"status" : cookuser.user_type == 'warehouse' ? old_status + ">" + "warehouseaccepted_" + cookuser.phone :  old_status + ">" +  'accepted_' + cookuser.phone,
  "row_id" : rowid
 } ),
       type: 'POST',
@@ -226,7 +225,6 @@ function updateapi(rowid,old_status)
       success: function(res) {
       }
        });
-       */
 	
 	}
 
