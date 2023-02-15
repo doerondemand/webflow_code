@@ -102,10 +102,10 @@ $('.accept_butt').click(function(){
  console.log( Number(elemcount)  )
  console.log( sheetdata[Number(elemcount) ] )
  updateapi( Number(elemcount) + 2,   sheetdata[Number(elemcount) ][26] )
-//$(this).parent().parent().parent().remove()
-//	let cust_ph = $(this).parent().parent().parent().find('#ticket_phone').text();
-//	let ord_stat = cookuser.user_type == 'warehouse' ?  "Accepted By Warehouse" :  "Accepted By Driver";
-//sendupdatesms(ord_stat,cust_ph)	
+$(this).parent().parent().parent().remove()
+	let cust_ph = $(this).parent().parent().parent().find('#ticket_phone').text();
+	let ord_stat = cookuser.user_type == 'warehouse' ?  "Accepted By Warehouse" :  "Accepted By Driver";
+sendupdatesms(ord_stat,cust_ph)	
 })
 
 $(initobj.elementdivclass)[0].remove();
