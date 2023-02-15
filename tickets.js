@@ -100,7 +100,7 @@ $('.accept_butt').click(function(){
  let elemcount = $(this).attr('elemindex')
  console.log( Number(elemcount)  )
  console.log( sheetdata[Number(elemcount) ] )
- //updateapi( Number(elemcount) + 2 )
+ updateapi( Number(elemcount) + 2,   sheetdata[Number(elemcount) ][26] )
 //$(this).parent().parent().parent().remove()
 //	let cust_ph = $(this).parent().parent().parent().find('#ticket_phone').text();
 //	let ord_stat = cookuser.user_type == 'warehouse' ?  "Accepted By Warehouse" :  "Accepted By Driver";
@@ -210,9 +210,12 @@ function sendotp(phone_num) {
 
 
 
-function updateapi(rowid)
+function updateapi(rowid,old_status)
 {
-    $.ajax({
+	console.log(old_status)
+
+	/*
+	$.ajax({
       url: "https://hooks.zapier.com/hooks/catch/10809363/bvri3xm/",
       data:JSON.stringify( {
 "status" : cookuser.user_type == 'warehouse' ?  "warehouseaccepted" : 'accepted_' + cookuser.phone,
@@ -222,8 +225,11 @@ function updateapi(rowid)
       dataType: 'json',
       success: function(res) {
       }
-       });   
-}
+       });
+       */
+	
+	}
+
 
 /*
 function setCookie(name,value,days) {
