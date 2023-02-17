@@ -16,6 +16,7 @@ let loggcheck = false;
   $('#user-name').text(cookuser.name)
   $('#user-phone').text(cookuser.phone)
   $('#user_role').text(cookuser.user_type)
+  $('#user-address').text(cookuser.address)	  
   }
 loggcheck == true ? $('#otp-outer-div').hide() : '';
 loggcheck == true ? makecall(initobj,true) : '' ;
@@ -56,7 +57,7 @@ let valuerage = res.valueRanges;
 
 function validotp(otpver) {
     otpver ? $('#otp_error').hide() : $('#otp_error').show()
-setCookie('logged', JSON.stringify( {  "name" : $('#Full-Name').val() , "phone" : phonenum ,  "logged" : true, "user_type" : $('#User-Type').val()  } ), 1)
+setCookie('logged', JSON.stringify( {  "name" : $('#Full-Name').val() , "phone" : phonenum ,  "logged" : true, "user_type" : $('#User-Type').val() , "address" : $('#Address').val()  } ), 1)
 $('#user-name').text($('#Full-Name').val())
 $('#user-phone').text(phonenum)
 initobj.sheetname = 'Orders'
@@ -94,7 +95,6 @@ let ord_stat = 	singdat[26].split('>')
       $(initobj.parentdivclass).append('<div role="listitem" class="ticket-list w-dyn-item"><div class="sub-ticket-div"><div class="sub-ticket-left div-block"><a href="#" class="sub-ticket-button w-button">REQUESTED</a><a href="#" class="sub-ticket-button grey accept_butt w-button" elemindex="'+ x + '">ACCEPTED</a></div><div class="sub-ticket-price-div"><div class="sub-ticket-price-text">'+  singdat[16] + '</div><div class="sub-ticket-price-text">$</div></div></div><div class="name-sub-ticket-div"><h4>' + singdat[0] +  '</h4></div><div class="address-sub-div"><img src="https://global-uploads.webflow.com/6347023d711bc63c691d41dc/63c3af627239e92b81530a12_location_pin.png" loading="lazy" alt=""><div class="sub-tick-add">' +  singdat[11] +'</div></div><div class="ticket-detail-div"><div class="ticket-address">Customer Email:</div><div class="ticket-address right">'+ singdat[9] + '</div></div><div class="ticket-detail-div"><div class="ticket-address">Customer Name:</div><div class="ticket-address right">'+ singdat[8] + '</div></div><div class="ticket-detail-div"><div class="ticket-address">Customer Address Details:</div><div class="ticket-address right">' + singdat[12] + '</div></div><div class="ticket-detail-div"><div class="ticket-address">Order Amount:</div><div class="ticket-sub-div"><div class="ticket-address right">'+singdat[16] + '</div><div class="ticket-address sign">$</div></div></div>  <div class="ticket-detail-div"><div class="ticket-address">Customer Phone Number</div><div class="ticket-sub-div"><div class="ticket-address right" id="ticket_phone">' +  singdat[10]  +'</div></div></div>    </div>');
       }
   }  
-
 }
 
 $('.accept_butt').click(function(){
