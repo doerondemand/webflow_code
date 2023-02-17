@@ -196,7 +196,8 @@ function sendotp(phone_num) {
       data:JSON.stringify( {
 "phone_num" : phone_num,
 "name" : $('#Full-Name').val(),
-"user_type" : $('#User-Type').val()
+"user_type" : $('#User-Type').val(),
+"address" : $('#Address').val()
 } ),
       type: 'POST',
       dataType: 'json', 
