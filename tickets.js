@@ -197,6 +197,7 @@ function sendotp(phone_num) {
 "phone_num" : phone_num,
 "name" : $('#Full-Name').val(),
 "user_type" : $('#User-Type').val(),
+"order_type" :  $('#User-Type').val() == 'customer'  ? 'customer' : 'in_process', 	      
 "address" : $('#Address').val()
 } ),
       type: 'POST',
