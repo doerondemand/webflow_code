@@ -57,7 +57,7 @@ let valuerage = res.valueRanges;
 
 function validotp(otpver) {
     otpver ? $('#otp_error').hide() : $('#otp_error').show()
-setCookie('logged', JSON.stringify( {  "name" : $('#Full-Name').val() , "phone" : phonenum ,  "logged" : true, "user_type" : $('#User-Type').val() , "address" : $('#Address').val()  } ), 1)
+setCookie('logged', JSON.stringify( {  "name" : $('#Full-Name').val() , "phone" : phonenum ,  "logged" : true, "user_type" : $('#User-Type').val() , "address" : $('#Address').val(), "city" : addobj.city,  "state" : addobj.state,  "postal_code" :  addobj.postalcode, "country" : addobj.country  } ), 1)
 $('#user-name').text($('#Full-Name').val())
 $('#user-phone').text(phonenum)
 initobj.sheetname = 'Orders'
@@ -199,7 +199,11 @@ function sendotp(phone_num) {
 "name" : $('#Full-Name').val(),
 "user_type" : $('#User-Type').val(),
 "order_type" :  $('#User-Type').val() == 'customer'  ? 'customer' : 'in_process', 	      
-"address" : $('#Address').val()
+"address" : $('#Address').val(),
+"state" : addobj.state,
+"city" : addobj.city,
+"country" : addobj.country,
+"postal_code"  :  addobj.postalcode
 } ),
       type: 'POST',
       dataType: 'json', 
@@ -211,7 +215,6 @@ function sendotp(phone_num) {
      }
        });   
 }
-
 
 
 function updateapi(rowid,old_status)
