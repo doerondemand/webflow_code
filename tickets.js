@@ -58,6 +58,7 @@ let valuerage = res.valueRanges;
 function validotp(otpver) {
     otpver ? $('#otp_error').hide() : $('#otp_error').show()
 setCookie('logged', JSON.stringify( {  "name" : $('#Full-Name').val() , "phone" : phonenum ,  "logged" : true, "user_type" : $('#User-Type').val() , "address" : $('#Address').val(), "city" : addobj.city,  "state" : addobj.state,  "postal_code" :  addobj.postalcode, "country" : addobj.country  } ), 1)
+cookuser = JSON.parse(getCookie('logged'))
 $('#user-name').text($('#Full-Name').val())
 $('#user-phone').text(phonenum)
 initobj.sheetname = 'Orders'
