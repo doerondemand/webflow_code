@@ -88,6 +88,7 @@ for(let x=0; x<homedat.length;x++)
 {
 let singdat = homedat[x];
 let ord_stat = 	singdat[26].split('>')
+console.log(singdat)
   if( cookuser.user_type == 'warehouse' && singdat[19] == cookuser.order_type) {
 	  console.log(singdat[26])
       if(singdat[26] == 'warehouse' ) {
