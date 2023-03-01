@@ -13,7 +13,8 @@
         }
 
         $('#logout_butt').click(function(){
-        eraseCookie('logged')
+        eraseCookie('logged');
+                   $('#my-profile').hide();
         $('#username').hide();
         $('#logout_butt').hide();
         $('#login-butt').show(); 
