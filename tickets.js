@@ -18,7 +18,7 @@ let loggcheck = false;
   $('#user_role').text(cookuser.user_type)
   $('#user-address').text(cookuser.address)	  
   }
-loggcheck == true ? $('#otp-outer-div').hide() : '';
+loggcheck == true ? $('#not-loggged').hide() : '';
 loggcheck == true ? makecall(initobj,true) : '' ;
 
 
