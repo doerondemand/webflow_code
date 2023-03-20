@@ -99,7 +99,8 @@ console.log(cookuser.user_type)
 '</h4></div><div class="address-sub-div"><img src="https://global-uploads.webflow.com/6347023d711bc63c691d41dc/63c3af627239e92b81530a12_location_pin.png" loading="lazy" alt=""><div class="sub-tick-add">' +  singdat[11] +
 '</div></div>   <div class="ticket-detail-div"><div class="ticket-address">Customer Email:</div><div class="ticket-address right">'+ singdat[9] + 
 '</div></div><div class="ticket-detail-div"><div class="ticket-address">Customer Name:</div><div class="ticket-address right">'+ singdat[8] + 
-'</div></div><div class="ticket-detail-div"><div class="ticket-address">Customer Address Details:</div><div class="ticket-address right">' + singdat[11] + 
+'</div></div><div class="ticket-detail-div"><div class="ticket-address">Warehouse Address:</div><div class="ticket-address right">' + singdat[23] + 
+'</div></div><div class="ticket-detail-div"><div class="ticket-address">Customer Address Details:</div><div class="ticket-address right">' + singdat[11] + 				       
 '</div></div><div class="ticket-detail-div"><div class="ticket-address">Order Amount:</div><div class="ticket-sub-div"><div class="ticket-address right">'+singdat[16] +
 '</div><div class="ticket-address sign">$</div></div></div>   <div class="ticket-detail-div"><div class="ticket-address">Customer Phone Number</div><div class="ticket-sub-div"><div class="ticket-address right"  id="ticket_phone">'+  singdat[10] + '</div></div></div>  </div>');
       }
@@ -112,7 +113,8 @@ console.log(cookuser.user_type)
 '</h4></div><div class="address-sub-div"><img src="https://global-uploads.webflow.com/6347023d711bc63c691d41dc/63c3af627239e92b81530a12_location_pin.png" loading="lazy" alt=""><div class="sub-tick-add">' +  singdat[11] +
 '</div></div><div class="ticket-detail-div"><div class="ticket-address">Customer Email:</div><div class="ticket-address right">'+ singdat[9] + 
 '</div></div><div class="ticket-detail-div"><div class="ticket-address">Customer Name:</div><div class="ticket-address right">'+ singdat[8] + 
-'</div></div><div class="ticket-detail-div"><div class="ticket-address">Customer Address Details:</div><div class="ticket-address right">' + singdat[11] + 
+'</div></div><div class="ticket-detail-div"><div class="ticket-address">Warehouse Address:</div><div class="ticket-address right">' + singdat[23] + 
+'</div></div><div class="ticket-detail-div"><div class="ticket-address">Customer Address Details:</div><div class="ticket-address right">' + singdat[11] + 				       
 '</div></div><div class="ticket-detail-div"><div class="ticket-address">Order Amount:</div><div class="ticket-sub-div"><div class="ticket-address right">'+singdat[16] +
 '</div><div class="ticket-address sign">$</div></div></div>  <div class="ticket-detail-div"><div class="ticket-address">Customer Phone Number</div><div class="ticket-sub-div"><div class="ticket-address right" id="ticket_phone">' +  singdat[10]  +
 '</div></div></div>    </div>');
